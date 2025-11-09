@@ -1,16 +1,16 @@
 terraform {
-  required_providers {
-    aws = {
-        source = "hashicorp/aws"
-        version = ">= 5.25.0"
-    }
-  }
+#   required_providers {
+#     aws = {
+#         source = "hashicorp/aws"
+#         version = ">= 5.25.0"
+#     }
+#   }
 
-  backend "s3" {
-    bucket = "state-remote-storeganesh"
-    key    = "eks/terraform.tfstate"
-    region = "ap-south-1"
-  }
+#   backend "s3" {
+#     bucket = "state-remote-storeganesh"
+#     key    = "eks/terraform.tfstate"
+#     region = "ap-south-1"
+#   }
 
-  required_version = ">= 1.6.3"
-}
+#   required_version = ">= 1.6.3"
+# }
