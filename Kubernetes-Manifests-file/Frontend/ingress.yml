@@ -10,7 +10,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: tesk.udamale.xyz
+    - host: task.udamale.xyz
       http:
         paths:
           - path: /api
