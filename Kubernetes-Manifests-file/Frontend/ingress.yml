@@ -17,7 +17,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: api
+                name: backend-svc
                 port:
                   number: 3500
           - path: /
