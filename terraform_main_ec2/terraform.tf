@@ -6,11 +6,11 @@ terraform {
     }
   }
 
-  backend "s3" {
-    bucket = "cloudcore007"
-    key    = "terraform.tfstate"
-    region = "us-east-1"
-  }
+  # backend "s3" {
+  #   bucket = "cloudcore007"
+  #   key    = "terraform.tfstate"
+  #   region = "ap-south-1"
+  # }
 
   required_version = ">= 1.6.3"
 }

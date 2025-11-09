@@ -1,5 +1,5 @@
 output "region" {
-    description = "Jumphost Server region"
+    description = "Bashan-host-with-jenkins-server"
     value = var.region
 }
 output "jumphost_public_ip" {

@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata: 
   name: api
-  namespace: three-tier
+  namespace: backend
   labels: 
     role: api
     env: demo
@@ -29,16 +29,16 @@ spec:
         imagePullPolicy: Always
         env:
           - name: MONGO_CONN_STR
-            value: mongodb://mongodb-svc:27017/todo?directConnection=true
+            value: mongodb://mongodb-svc.database.svc.cluster.local:27017/todo?directConnection=true
           - name: MONGO_USERNAME
             valueFrom:
               secretKeyRef:
-                name: mongo-sec
+                name: mongo-sec1
                 key: username
           - name: MONGO_PASSWORD
             valueFrom:
               secretKeyRef:
-                name: mongo-sec
+                name: mongo-sec1
                 key: password
         ports:
         - containerPort: 3500
@@ -46,12 +46,12 @@ spec:
           httpGet:
             path: /ok
             port: 3500
-          initialDelaySeconds: 2
+          initialDelaySeconds: 20
           periodSeconds: 5
         readinessProbe:
           httpGet:
             path: /ok
             port: 3500
-          initialDelaySeconds: 5
+          initialDelaySeconds: 20
           periodSeconds: 5
           successThreshold: 1

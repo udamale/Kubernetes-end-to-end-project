@@ -1,72 +1,72 @@
 variable "region" {
   description = "AWS region"
   type = string
-  default = "us-east-1"
+  default = "ap-south-1"
 }
 
 variable "vpc-name" {
-  description = "VPC Name for our Jumphost server"
+  description = "VPC Name for our Eks-cluster server"
   type = string
-  default = "Jumphost-vpc"
+  default = "Eks-cluster-vpc"
 }
 
 variable "igw-name" {
-  description = "Internet Gate Way Name for our Jumphost server"
+  description = "Internet Gate Way Name for our Eks-cluster server"
   type = string
-  default = "Jumphost-igw"
+  default = "Eks-cluster-igw"
 }
 
 variable "subnet-name1" {
-  description = "Subnet Name for our Jumphost server"
+  description = "Subnet Name for our Eks-cluster server"
   type = string
-  default = "Jumphost-subnet1"
+  default = "Eks-cluster-subnet1-1a"
 }
 
 variable "subnet-name2" {
-  description = "Subnet Name for our Jumphost server"
+  description = "Subnet Name for our Eks-cluster server"
   type = string
-  default = "Jumphost-subnet2"
+  default = "Eks-cluster-subnet2-1b"
 }
 variable "rt-name" {
-  description = "Route Table Name for our Jumphost server"
+  description = "Route Table Name for our Eks-cluster server"
   type = string
-  default = "Jumphost-rt"
+  default = "Eks-cluster-rt"
 }
 
 variable "sg-name" {
-  description = "Security Group for our Jumphost server"
+  description = "Security Group for our Eks-cluster server"
   type = string
-  default = "Jumphost-sg"
+  default = "Eks-cluster-sg"
 }
 
 
 variable "iam-role" {
-  description = "IAM Role for the Jumphost Server"
+  description = "IAM Role for the Eks-cluster Server"
   type = string
-  default = "Jumphost-iam-role1"
+  default = "Eks-cluster-iam-role1"
 }
 
 variable "ami_id" {
   description = "AMI ID for the EC2 instance"
   type        = string
-  default     = "ami-0bb84b8ffd87024d8" // Replace with the latest AMI ID for your region
+  default     = "ami-0305d3d91b9f22e84" // Replace with the latest AMI ID for your region
 }
 
 variable "instance_type" {
   description = "EC2 instance type"
   type        = string
-  default     = "t2.large"
+  default     = "t2.medium"
 }
 
 variable "key_name" {
   description = "EC2 keypair"
   type        = string
-  default     = "sri"
+  default     = "first_server"
 }
 
 variable "instance_name" {
   description = "EC2 Instance name for the jumphost server"
   type        = string
-  default     = "Jumphost-server"
+  default     = "Bashan-host-with-jenkins-server"
 }
 #
